@@ -9,6 +9,16 @@ body {
     font-size: small;
 }
 
+a {
+    color: #004968;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+	color:#0077AA;
+}
+
 .name {
     font-weight: 300;
     font-size: 36px;
@@ -320,7 +330,13 @@ img.document {
 
 a.document {
     font-weight: bold;
+    font-size: medium;
     color: #004968;
+    text-decoration: underline;
+}
+
+a.document:hover {
+	color:#0077AA;
 }
 
 a.logo {
