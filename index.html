@@ -13,86 +13,101 @@
 
 <body>
 <div>
-    <img class="picture" onMouseout="javascript:notPull();"
-    onMouseover="javascript:pull();" id="me" src="./images/pull_01.png"
-    alt="me">
+  <img class="picture" onMouseout="javascript:notPull();"
+  onMouseover="javascript:pull();" id="me" src="./images/pull_01.png"
+  alt="me">
 </div>
 
 <div class="page">
-    <!-- ####______________________ HEADER ______________________#### -->
-    <div class="header">
-        <h1 class="name">Perelló Nieto, Miquel</h1>
+  <!-- ####______________________ HEADER ______________________#### -->
+  <div class="header">
+    <h1 class="name">Perelló Nieto, Miquel</h1>
+  </div>
+  <!-- ####______________________ LEFT PANEL ______________________#### -->
+  <div class="panel">
+    <ul class="panel">
+      <li><a class="panel" href="./index.html">About me</a></li>
+      <li><a class="panel" href="./documents.html">Documents</a></li>
+      <li><a class="panel" href="./quotations.html">Quotations</a></li>
+      <li><a class="panel" href="./pictures.html">Pictures</a></li>
+      <li><a class="panel" href="./videos.html">Videos</a></li>
+      <li><a class="panel" href="./cv.html">CV</a></li>
+      <li><a class="panel" href="./contact.html">Contact</a></li>
+    </ul>
+    <div class="imgSection">
+      <img src="images/personal.png">
     </div>
-    <!-- ####______________________ LEFT PANEL ______________________#### -->
-    <div class="panel">
-        <ul class="panel">
-            <li><a class="panel" href="./index.html">About me</a></li>
-            <li><a class="panel" href="./documents.html">Documents</a></li>
-            <li><a class="panel" href="./quotations.html">Quotations</a></li>
-            <li><a class="panel" href="./pictures.html">Pictures</a></li>
-            <li><a class="panel" href="./videos.html">Videos</a></li>
-            <li><a class="panel" href="./cv.html">CV</a></li>
-            <li><a class="panel" href="./contact.html">Contact</a></li>
-        </ul>
-        <div class="imgSection">
-            <img src="images/personal.png">
-        </div>
+  </div>
+  <!-- ####______________________ CONTENT __________________#### -->
+  <div  class="continente">
+
+    <!-- ####____________________ PERSONAL ____________________#### -->
+    <div class="contenido" id="personal">
+
+      <div class="student">
+        <img class="student"
+        onMouseover="javascript:imgPersonalOver();"
+        onMouseout="javascript:imgPersonalOut();"
+        onClick="javascript:imgPersonalClick();" id="imgPersonal"
+        src="images/valleta_200_bw.png" alt="picture">
+      </div>
+
+      <div>
+        <h2 class="title">About me</h2>
+        <span>
+          <p>
+          My name is Miquel Perelló Nieto and I am a PhD student in Computer
+          Science and a Research Assosiate at the <a
+            href="http://www.bris.ac.uk/">University of Bristol</a>, UK.
+          </p>
+
+          <p>
+          I received a double MSc degree on Artificial Intelligence from a
+          consortium between <a href="http://www.upc.edu/">Technical University
+            of Catalonia</a>, <a href="http://www.ub.edu/web/ub/en/">Barcelona
+            University</a> and <a
+            href="http://www.urv.cat/en_index.html">Rovira i Virgil
+            University</a> and MSc degree on Machine Learning and Data Mining from
+          <a href="http://www.aalto.fi/en/">Aalto University School of Science
+          </a>. I previously received a BSc degree in Technical Engineering on
+          Computer Science from Technical University of Catalonia in
+          2011.
+          </p>
+
+          <p> I have been previously a Research Assistant in the <a
+            href="http://reframe-d2k.org/Main_Page">REFRAME project</a>
+          employed by University of Bristol and <a
+            href="https://www.unistra.fr">Université de Strasbourg</a> under
+          the supervision of <a
+            href="https://www.cs.bris.ac.uk/~flach/">Prof. Peter Flach</a>
+          and <a
+            href="http://icube-sdc.unistra.fr/fr/index.php/Nicolas_Lachiche">Dr.
+            Nicolas Lachiche</a>.
+          </p>
+
+          <p>
+          I also have been a Research Assistant within the <a
+            href="http://research.ics.aalto.fi/bayes/">Deep Learning and Bayesian
+            Modeling research group</a> in the department of Computer Science led
+          jointly by <a href="https://users.ics.aalto.fi/juha/">Prof. Juha
+            Karhunen</a> and Assistant <a
+            href="https://users.ics.aalto.fi/praiko/">Prof. Tapani Raiko</a>.
+          </p>
+
+          <p>
+          You may consider looking at my MSc thesis about <a
+            href="https://users.ics.aalto.fi/perellm1/thesis.shtml">
+            Mergin chrominance and luminance in an early, medium and
+            late fusion using Convolutional Neural Networks </a>
+          </p>
+        </span>
+      </div>
     </div>
-    <!-- ####______________________ CONTENT __________________#### -->
-    <div  class="continente">
-
-        <!-- ####____________________ PERSONAL ____________________#### -->
-        <div class="contenido" id="personal">
-
-            <div class="student">
-                <img class="student"
-                onMouseover="javascript:imgPersonalOver();"
-                onMouseout="javascript:imgPersonalOut();"
-                onClick="javascript:imgPersonalClick();" id="imgPersonal"
-                src="images/valleta_200_bw.png" alt="picture">
-            </div>
-
-            <div>
-                <h2 class="title">About me</h2>
-                <span>
-                    I received my B.S. degree in Technical Engineer in Computer
-                    Systems from the Technical University of Catalonia in 2012,
-                    a Master degree in Artificial Intelligence from a
-                    consortium between the <a
-                        href="http://www.upc.edu/">Technical University
-                        of Catalonia</a>, <a
-                        href="http://www.ub.edu/web/ub/en/">Barcelona
-                        University</a> and <a
-                        href="http://www.urv.cat/en_index.html">Rovira i Virgil
-                        University</a> in 2015, and a Master of Science in Machine
-                    Learning and Data Mining from <a
-                        href="http://www.aalto.fi/en/">Aalto University School of
-                        Science</a> in 2015. My primary research interest is in artificial
-                    intelligence, machine learning and meta-learning.
-                    <br />
-                    <br />
-                    I have been a Research Assistant within the <a
-                        href="http://research.ics.aalto.fi/bayes/">Deep Learning
-                        and Bayesian Modeling research group</a> in the department
-                    of Computer Science led jointly by Prof.  <a
-                        href="https://users.ics.aalto.fi/juha/">Juha
-                        Karhunen</a> and Assistant Prof. <a
-                        href="https://users.ics.aalto.fi/praiko/">Tapani
-                        Raiko</a>.
-                    <br />
-                    <br />
-                    You may consider to check out my MSc thesis about <a
-                        href="https://users.ics.aalto.fi/perellm1/thesis.shtml">
-                        Mergin chrominance and luminance in an early, medium and
-                        late fusion using Convolutional Neural Networks </a>
-                </span>
-            </div>
-        </div>
-    </div>
+  </div>
 </div>
 <!-- ####______________________ FOOTER ______________________#### -->
 <div class="footer">
-    <p><var id="date"></var> © Miquel Perelló Nieto</p>
+  <p><var id="date"></var> © Miquel Perelló Nieto</p>
 </div>
 </body>
 </html>
