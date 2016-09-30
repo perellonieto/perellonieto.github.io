@@ -3,12 +3,13 @@ body {
 	/*background="../images/background.gif"*/
 	background-image:url('../images/background_4k.png');
 	background-repeat:repeat-x;
-	background-color:black;
 	margin-left: 5%;
 	width: 90%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
 }
 
-h1.name {
+.name {
     font-weight: 300;
     font-size: 36px;
     font-family: times new roman,serif;
@@ -24,17 +25,17 @@ h3.title{
 	color:#0077AA;
 }
 
-h3.cv {
+.cv {
     color:#0077AA;
 }
 
-div.header {
+.header {
     position:relative;
     margin-left: 50px;
 	width: 90%;
 }
 
-div.page {
+.page {
     background-image:url('../images/textura_02_mosaic_light.png');
     background-repeat:repeat;
     position:relative;
@@ -54,24 +55,24 @@ div.page {
     box-shadow: 0 0 30px 15px #444;
 }
 
-div.idioms {
+.idioms {
     float:right;
     position:relative;
     right:3px;
     top:3px;
 }
 
-img.notselected {
+.notselected {
     opacity:0.2;
     border:0px;
 }
 
-img.img_idiom:hover {
+.img_idiom:hover {
     opacity:1;
     border:0px;
 }
 
-div.imgSection {
+.imgSection {
 /*  float:left;
     position:relative;
     width:0px;
@@ -81,11 +82,11 @@ div.imgSection {
     margin-left: 40px;
 }
 
-div.newimgSection {
+.newimgSection {
     margin-left: 10px;
 }
 
-div.continente {
+.continente {
 	margin-left: 165px;
 	width: 75%;
 	margin-top: 0px;
@@ -93,50 +94,50 @@ div.continente {
 	min-height:200px;
 }
 
-div#personal {
+#personal {
     text-align: justify;
 }
 
-div#documents {
+#documents {
     text-align: justify;
 }
 
-div#pictures {
+#pictures {
 }
 
-div#cv {
+#cv {
     text-align: justify;
 }
 
-div#contact {
+#contact {
 }
 
-div#videos {
+#videos {
 }
 
-div.cv_dow {
+.cv_dow {
 }
 
-div.quota {
+.quota {
     font-family: "Times New Roman", Times, serif;
     font-style: italic;
-    font-size: 21px;
+    font-size: large;
     text-align: justify;
     padding-top: 15px;
     padding-bottom: 15px;
     max-width: 700px;
 }
 
-div.quota_author {
+.quota_author {
     font-family: "Times New Roman", Times, serif;
     font-style: normal;
-    font-size: 17px;
+    font-size: large;
     text-align: right;
     padding-bottom: 40px;
     max-width: 700px;
 }
 
-img.newpicture {
+.newpicture {
     float:right;
     position:absolute;
     position:fixed;
@@ -148,7 +149,7 @@ img.newpicture {
     box-shadow: 0px 0px 10px 2px rgb(51, 51, 51);
 }
 
-img.picture {
+.picture {
     float:right;
     position:absolute;
     position:fixed;
@@ -158,7 +159,7 @@ img.picture {
     display:block;
 }
 
-img.pointer {
+.pointer {
     float:right;
     position:relative;
     position:fixed;
@@ -181,7 +182,7 @@ img.picture:hover {
 }*/
 
 
-img.frame {
+.frame {
     float:left;
     position:relative;
 
@@ -190,7 +191,7 @@ img.frame {
     border:3px;
 }
 
-div.student {
+.student {
     float:right;
     position:relative;
 
@@ -200,7 +201,7 @@ div.student {
     height:251px;
 
     top:0px;
-    right:5px;
+    right:0px;
 
     margin-left:30px;
 
@@ -246,7 +247,7 @@ div.newpanel {
     position: fixed;
     width: 120px;
     margin: 20px;
-    padding 10px;
+    padding: 10px;
     border: 5px double;
     border-color: lightgray;
     border-radius: 10px;
@@ -278,19 +279,19 @@ a.panel:hover{
     text-decoration:none;
 }
 
-div#preload {
+#preload {
     display:none;
     width:0px;
     height:0px;
 }
 
-img.preload {
+.preload {
     width:0px;
     height:0px;
     display:none;
 }
 
-div.footer {
+.footer {
     margin-top: 30px;
     text-align: center;
 }
