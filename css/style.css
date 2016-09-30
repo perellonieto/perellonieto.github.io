@@ -1,10 +1,10 @@
 body {
-	background-color: #E9EEFF;
+	background-color: black;
 	/*background="../images/background.gif"*/
 	background-image:url('../images/background_4k.png');
 	background-repeat:repeat-x;
-	background-color:lightgray;
-	margin-left: 5%; 
+	background-color:black;
+	margin-left: 5%;
 	width: 90%;
 }
 
@@ -30,7 +30,7 @@ h3.cv {
 
 div.header {
     position:relative;
-    margin-left: 50px; 
+    margin-left: 50px;
 	width: 90%;
 }
 
@@ -42,12 +42,12 @@ div.page {
     margin-bottom: 30px;
     margin-left: auto ;
     margin-right: auto ;
-	border: 1px solid rgb(147, 147, 147); 
+	border: 1px solid rgb(147, 147, 147);
 	/*background-color: #DFDFFF; */
 	background-color: #FFFFFF;
 	overflow: visible;
 	min-width:700px;
-	max-width:800px;
+	max-width:85%;
 	min-height:400px;
 	-moz-box-shadow: 0 0 30px 15px #444;
     -webkit-box-shadow: 0 0 30px 15px #444;
@@ -71,26 +71,26 @@ img.img_idiom:hover {
     border:0px;
 }
 
-div.panel {
-    float:left;
-    position:relative;
-	width: 140px;
-}
-
 div.imgSection {
-    float:left;
+/*  float:left;
     position:relative;
     width:0px;
     top:200px;
     left:-135px;
+*/
+    margin-left: 40px;
+}
+
+div.newimgSection {
+    margin-left: 10px;
 }
 
 div.continente {
-	margin-left: 165px; 
-	width: 75%; 
+	margin-left: 165px;
+	width: 75%;
 	margin-top: 0px;
 	margin-bottom:30px;
-	min-height:200px; 
+	min-height:200px;
 }
 
 div#personal {
@@ -115,8 +115,6 @@ div#videos {
 }
 
 div.cv_dow {
-    float:left;
-    position:relative;
 }
 
 div.quota {
@@ -125,6 +123,8 @@ div.quota {
     font-size: 21px;
     text-align: justify;
     padding-top: 15px;
+    padding-bottom: 15px;
+    max-width: 700px;
 }
 
 div.quota_author {
@@ -132,7 +132,20 @@ div.quota_author {
     font-style: normal;
     font-size: 17px;
     text-align: right;
-    padding-bottom: 20px;
+    padding-bottom: 40px;
+    max-width: 700px;
+}
+
+img.newpicture {
+    float:right;
+    position:absolute;
+    position:fixed;
+    top:10px;
+    right:-87px;
+    border:0px;
+    display:block;
+    border-radius: 50px;
+    box-shadow: 0px 0px 10px 2px rgb(51, 51, 51);
 }
 
 img.picture {
@@ -171,7 +184,7 @@ img.picture:hover {
 img.frame {
     float:left;
     position:relative;
-    
+
     top:400px;
     right:5px;
     border:3px;
@@ -180,21 +193,21 @@ img.frame {
 div.student {
     float:right;
     position:relative;
-    
+
     /*background: url('../images/valleta_200_body.png') no-repeat;*/
-    
+
     width:200px;
     height:251px;
-    
+
     top:0px;
     right:5px;
-    
+
     margin-left:30px;
-    
+
     -moz-box-shadow: 0 0 10px 5px #333;
     -webkit-box-shadow: 0 0 10px 5px #333;
     box-shadow: 0 0 10px 5px #333;
-    
+
     cursor:crosshair;
 }
 
@@ -202,25 +215,50 @@ div.student {
 img.student {
     float:right;
     position:relative;
-    
+
     background: url('../images/valleta_200.png') no-repeat;
-    
+
     width:200px;
     height:251px;
-    
+
     top:0px;
     right:5px;
     border:5px;
-    
+
     -moz-box-shadow: 0 0 10px 5px #333;
     -webkit-box-shadow: 0 0 10px 5px #333;
     box-shadow: 0 0 10px 5px #333;
 }*/
 
 /*img.student:hover {
-    
+
     background: url("../images/valleta_200.png") no-repeat;
 }*/
+
+div.panel {
+    float:left;
+    position:relative;
+	width: 180px;
+}
+
+div.newpanel {
+    float: left;
+    position: fixed;
+    width: 120px;
+    margin: 20px;
+    padding 10px;
+    border: 5px double;
+    border-color: lightgray;
+    border-radius: 10px;
+    -moz-box-shadow: 0 0 10px 5px #333;
+    -webkit-box-shadow: 0 0 10px 5px #333;
+    box-shadow: 0 0 10px 5px #333;
+}
+
+ul.newpanel {
+    list-style-type: none;
+    padding-left: 0px;
+}
 
 ul.panel {
     list-style-type: none;
@@ -255,4 +293,41 @@ img.preload {
 div.footer {
     margin-top: 30px;
     text-align: center;
+}
+
+div.document {
+  background: white;
+  padding: 1%;
+  overflow: auto;
+  border-radius: 15px;
+  border: 1px solid;
+  border-color: #005E86;
+  margin: 2% 0px 10px 10px;
+}
+
+p.document {
+  width: 80%;
+}
+
+img.document {
+  width: 20%;
+  float: right;
+  min-width: 150px;
+  max-width: 250px;
+  margin: 5px;
+}
+
+a.document {
+    font-weight: bold;
+    color: #004968;
+}
+
+a.logo {
+    text-decoration: none;
+}
+
+img.logo {
+    max-width: 200px;
+    max-height: 150px;
+    border: 0px;
 }
