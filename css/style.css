@@ -1,0 +1,258 @@
+body {
+	background-color: #E9EEFF;
+	/*background="../images/background.gif"*/
+	background-image:url('../images/background_4k.png');
+	background-repeat:repeat-x;
+	background-color:lightgray;
+	margin-left: 5%; 
+	width: 90%;
+}
+
+h1.name {
+    font-weight: 300;
+    font-size: 36px;
+    font-family: times new roman,serif;
+    font-style: oblique;
+}
+
+h2.title{
+    font-weight: bold;
+	color:#0B3861;
+}
+
+h3.title{
+	color:#0077AA;
+}
+
+h3.cv {
+    color:#0077AA;
+}
+
+div.header {
+    position:relative;
+    margin-left: 50px; 
+	width: 90%;
+}
+
+div.page {
+    background-image:url('../images/textura_02_mosaic_light.png');
+    background-repeat:repeat;
+    position:relative;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: auto ;
+    margin-right: auto ;
+	border: 1px solid rgb(147, 147, 147); 
+	/*background-color: #DFDFFF; */
+	background-color: #FFFFFF;
+	overflow: visible;
+	min-width:700px;
+	max-width:800px;
+	min-height:400px;
+	-moz-box-shadow: 0 0 30px 15px #444;
+    -webkit-box-shadow: 0 0 30px 15px #444;
+    box-shadow: 0 0 30px 15px #444;
+}
+
+div.idioms {
+    float:right;
+    position:relative;
+    right:3px;
+    top:3px;
+}
+
+img.notselected {
+    opacity:0.2;
+    border:0px;
+}
+
+img.img_idiom:hover {
+    opacity:1;
+    border:0px;
+}
+
+div.panel {
+    float:left;
+    position:relative;
+	width: 140px;
+}
+
+div.imgSection {
+    float:left;
+    position:relative;
+    width:0px;
+    top:200px;
+    left:-135px;
+}
+
+div.continente {
+	margin-left: 165px; 
+	width: 75%; 
+	margin-top: 0px;
+	margin-bottom:30px;
+	min-height:200px; 
+}
+
+div#personal {
+    text-align: justify;
+}
+
+div#documents {
+    text-align: justify;
+}
+
+div#pictures {
+}
+
+div#cv {
+    text-align: justify;
+}
+
+div#contact {
+}
+
+div#videos {
+}
+
+div.cv_dow {
+    float:left;
+    position:relative;
+}
+
+div.quota {
+    font-family: "Times New Roman", Times, serif;
+    font-style: italic;
+    font-size: 21px;
+    text-align: justify;
+    padding-top: 15px;
+}
+
+div.quota_author {
+    font-family: "Times New Roman", Times, serif;
+    font-style: normal;
+    font-size: 17px;
+    text-align: right;
+    padding-bottom: 20px;
+}
+
+img.picture {
+    float:right;
+    position:absolute;
+    position:fixed;
+    top:10px;
+    right:-87px;
+    border:0px;
+    display:block;
+}
+
+img.pointer {
+    float:right;
+    position:relative;
+    position:fixed;
+    /*top:+10px;
+    left:100px;*/
+    border:0px;
+    margin:0px;
+    padding:0px;
+}
+
+/*
+img.picture:hover {
+    float:right;
+    position:absolute;
+    position:fixed;
+    top:10px;
+    right:0px;
+    border:0px;
+    display:block;
+}*/
+
+
+img.frame {
+    float:left;
+    position:relative;
+    
+    top:400px;
+    right:5px;
+    border:3px;
+}
+
+div.student {
+    float:right;
+    position:relative;
+    
+    /*background: url('../images/valleta_200_body.png') no-repeat;*/
+    
+    width:200px;
+    height:251px;
+    
+    top:0px;
+    right:5px;
+    
+    margin-left:30px;
+    
+    -moz-box-shadow: 0 0 10px 5px #333;
+    -webkit-box-shadow: 0 0 10px 5px #333;
+    box-shadow: 0 0 10px 5px #333;
+    
+    cursor:crosshair;
+}
+
+/*
+img.student {
+    float:right;
+    position:relative;
+    
+    background: url('../images/valleta_200.png') no-repeat;
+    
+    width:200px;
+    height:251px;
+    
+    top:0px;
+    right:5px;
+    border:5px;
+    
+    -moz-box-shadow: 0 0 10px 5px #333;
+    -webkit-box-shadow: 0 0 10px 5px #333;
+    box-shadow: 0 0 10px 5px #333;
+}*/
+
+/*img.student:hover {
+    
+    background: url("../images/valleta_200.png") no-repeat;
+}*/
+
+ul.panel {
+    list-style-type: none;
+}
+
+a.panel{
+    color: #0077AA;
+	font-weight: 400;
+	font-size: 20px;
+	text-decoration:none;
+}
+
+a.panel:hover{
+    color: #0B3861;
+    font-weight: 400;
+    font-size: 20px;
+    text-decoration:none;
+}
+
+div#preload {
+    display:none;
+    width:0px;
+    height:0px;
+}
+
+img.preload {
+    width:0px;
+    height:0px;
+    display:none;
+}
+
+div.footer {
+    margin-top: 30px;
+    text-align: center;
+}
