@@ -250,6 +250,7 @@ div.panel {
     float:left;
     position:relative;
 	width: 180px;
+    padding-bottom: 30px;
 }
 
 div.newpanel {
