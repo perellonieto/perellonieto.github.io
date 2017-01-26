@@ -21,8 +21,8 @@ function imgPersonalOut()
     }, 850, function() {
       personal_over = false;
       personal_out = false;
-      
-      
+
+
       /*if (imgPersId < imgPersMax-1)
        *                    {
        *                        imgPersId = (imgPersId+1);
@@ -32,9 +32,9 @@ function imgPersonalOut()
     {
     actual=Math.floor(Math.random()*imgPersMax);
     }*/
-      
+
       actual=Math.floor(Math.random()*imgPersMax);
-      
+
       var contenidos = document.getElementsByTagName("div");
       for(var x=0; x<contenidos.length; x++)
       {
@@ -51,20 +51,30 @@ function imgPersonalOut()
 
 function pull()
 {
-  $('#me').animate({
-    "right": "0px"
-  }, 400, function() {
-    // Animation complete.
-  });
+  if (pull_over == false)
+  {
+    pull_over = true;
+    $('#me').animate({
+      "right": "0px"
+    }, 2500, function() {
+      // Animation complete.
+    });
+  }
 }
 
 function notPull()
 {
-  $('#me').animate({
-    "right": "-87px"
-  }, 400, function() {
-    // Animation complete.
-  });
+  if (pull_over == true && pull_out == false)
+  {
+    pull_out = true;
+    $('#me').animate({
+      "right": "-87px"
+    }, 2500, function() {
+      // Animation complete.
+      pull_over = false;
+      pull_out = false;
+    });
+  }
 }
 
 function personalBackground()
@@ -94,6 +104,8 @@ function preload(images) {
 
 personal_over = false;
 personal_out  = false;
+pull_over = false;
+pull_out  = false;
 imgPersId = 0;
 imgPersList = ["./images/valleta_200_shirt_org.png",
 "./images/valleta_200_only_me.png",
@@ -125,16 +137,16 @@ function updateDate()
 {
   var dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
   var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-  
+
   var date = new Date(document.lastModified);
-  
+
   var num = date.getDate();
   var day = dayNames[date.getDay()];
   var month = monthNames[date.getMonth()];
   var year = date.getFullYear();
-  
+
   var LastUpdated = day + ", " + num + " " + month + " " + year ;
-  
+
   document.getElementById("date").innerHTML = "This page was last updated on " + LastUpdated;
 }
 
