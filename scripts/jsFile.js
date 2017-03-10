@@ -150,9 +150,56 @@ function updateDate()
   document.getElementById("date").innerHTML = "This page was last updated on " + LastUpdated;
 }
 
+function load_random_quotation()
+{
+    $.getJSON("quotations.json", function(json) {
+        var i = Math.floor(Math.random()*json.quotations.length);
+        var $div_quote = $("<div>", {"class": "quote"}).text(json.quotations[i].quote);
+        var $div_author = $("<div>", {"class": "quote_author"}).text(json.quotations[i].author);
+        $("#personal").append($div_quote);
+        $("#personal").append($div_author);
+    });
+}
+
+function load_day_quotation()
+{
+    var now = new Date();
+    var fullDaysSinceEpoch = Math.floor(now/8.64e7);
+
+    $div_day_quote = $("<div>").append($("<h2>", {"class": "title"}).text("Today's quote"));
+    $("#personal").append($div_day_quote);
+
+    $.getJSON("quotations.json", function(json) {
+        var i = fullDaysSinceEpoch%json.quotations.length;
+        var $div_quote = $("<div>", {"class": "quote"}).text(json.quotations[i].quote);
+        var $div_author = $("<div>", {"class": "quote_author"}).text(json.quotations[i].author);
+        $div_day_quote.append($div_quote);
+        $div_day_quote.append($div_author);
+    });
+}
+
+function load_all_quotations()
+{
+    $.getJSON("quotations.json", function(json) {
+        for (var i=0; i<json.quotations.length; i++) {
+            var $div_quote = $("<div>", {"class": "quote"}).text('"' + json.quotations[i].quote + '"');
+            var $div_author = $("<div>", {"class": "quote_author"}).text(json.quotations[i].author);
+            $("#quotations").append($div_quote);
+            $("#quotations").append($div_author);
+        }
+    });
+}
+
 function init() {
-  personalBackground();
-  preload(imgPersList);
+  var personal = document.getElementById("personal");
+  if (personal) {
+      personalBackground();
+      preload(imgPersList);
+      load_day_quotation();
+  }
+  if (document.getElementById("quotations")) {
+    load_all_quotations();
+  }
 }
 
 window.onload = init;
