@@ -171,7 +171,7 @@ function load_day_quotation()
 
     $.getJSON("quotations.json", function(json) {
         var i = fullDaysSinceEpoch%json.quotations.length;
-        var $div_quote = $("<div>", {"class": "quote"}).text(json.quotations[i].quote);
+        var $div_quote = $("<div>", {"class": "quote"}).text('"' + json.quotations[i].quote + '"');
         var $div_author = $("<div>", {"class": "quote_author"}).text(json.quotations[i].author);
         $div_day_quote.append($div_quote);
         $div_day_quote.append($div_author);
