@@ -150,23 +150,29 @@ function updateDate()
   document.getElementById("date").innerHTML = "This page was last updated on " + LastUpdated;
 }
 
-function load_random_quotation()
+function load_random_quote()
 {
+    var now = new Date();
+    var fullDaysSinceEpoch = Math.floor(now/8.64e7);
+
+    $div_day_quote = $("<div>").append($("<h2>", {"class": "title"}).text("Random favorite quote"));
+    $("#personal").append($div_day_quote);
+
     $.getJSON("quotations.json", function(json) {
         var i = Math.floor(Math.random()*json.quotations.length);
-        var $div_quote = $("<div>", {"class": "quote"}).text(json.quotations[i].quote);
+        var $div_quote = $("<div>", {"class": "quote"}).text('"' + json.quotations[i].quote + '"');
         var $div_author = $("<div>", {"class": "quote_author"}).text(json.quotations[i].author);
         $("#personal").append($div_quote);
         $("#personal").append($div_author);
     });
 }
 
-function load_day_quotation()
+function load_day_quote()
 {
     var now = new Date();
     var fullDaysSinceEpoch = Math.floor(now/8.64e7);
 
-    $div_day_quote = $("<div>").append($("<h2>", {"class": "title"}).text("Today's quote"));
+    $div_day_quote = $("<div>").append($("<h2>", {"class": "title"}).text("A random quote"));
     $("#personal").append($div_day_quote);
 
     $.getJSON("quotations.json", function(json) {
@@ -195,7 +201,7 @@ function init() {
   if (personal) {
       personalBackground();
       preload(imgPersList);
-      load_day_quotation();
+      load_random_quote();
   }
   if (document.getElementById("quotations")) {
     load_all_quotations();
