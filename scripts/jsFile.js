@@ -160,8 +160,10 @@ function load_random_quote()
 
     $.getJSON("quotations.json", function(json) {
         var i = Math.floor(Math.random()*json.quotations.length);
-        var $div_quote = $("<div>", {"class": "quote"}).text('"' + json.quotations[i].quote + '"');
-        var $div_author = $("<div>", {"class": "quote_author"}).text(json.quotations[i].author);
+        var quote = json.quotations[i]
+        var $div_quote = $("<div>", {"class": "quote"}).text('"' + quote.quote + '"');
+        var author_text = quote.author + '(' + quote.a_years + ')'
+        var $div_author = $("<div>", {"class": "quote_author"}).text(author_text);
         $("#personal").append($div_quote);
         $("#personal").append($div_author);
     });
@@ -184,12 +186,29 @@ function load_day_quote()
     });
 }
 
+function div_quote(quote) {
+    var $div_quote = $("<div>", {"class": "quote"}).text('"' + quote.quote + '"');
+    return $div_quote
+}
+
+function div_author(quote) {
+    var author_text = quote.author
+    if (quote.a_years) {
+        author_text += ' (' + quote.a_years + ')';
+    }
+    if (quote.source) {
+        author_text += ', ' + quote.source;
+    }
+    var $div_author = $("<div>", {"class": "quote_author"}).text(author_text);
+    return $div_author
+}
+
 function load_all_quotations()
 {
     $.getJSON("quotations.json", function(json) {
         for (var i=0; i<json.quotations.length; i++) {
-            var $div_quote = $("<div>", {"class": "quote"}).text('"' + json.quotations[i].quote + '"');
-            var $div_author = $("<div>", {"class": "quote_author"}).text(json.quotations[i].author);
+            var $div_quote = div_quote(json.quotations[i]);
+            var $div_author = div_author(json.quotations[i]);
             $("#quotations").append($div_quote);
             $("#quotations").append($div_author);
         }
