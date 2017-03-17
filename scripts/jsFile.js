@@ -150,42 +150,6 @@ function updateDate()
   document.getElementById("date").innerHTML = "This page was last updated on " + LastUpdated;
 }
 
-function load_random_quote()
-{
-    var now = new Date();
-    var fullDaysSinceEpoch = Math.floor(now/8.64e7);
-
-    $div_day_quote = $("<div>").append($("<h2>", {"class": "title"}).text("Random favorite quote"));
-    $("#personal").append($div_day_quote);
-
-    $.getJSON("quotations.json", function(json) {
-        var i = Math.floor(Math.random()*json.quotations.length);
-        var quote = json.quotations[i]
-        var $div_quote = $("<div>", {"class": "quote"}).text('"' + quote.quote + '"');
-        var author_text = quote.author + '(' + quote.a_years + ')'
-        var $div_author = $("<div>", {"class": "quote_author"}).text(author_text);
-        $("#personal").append($div_quote);
-        $("#personal").append($div_author);
-    });
-}
-
-function load_day_quote()
-{
-    var now = new Date();
-    var fullDaysSinceEpoch = Math.floor(now/8.64e7);
-
-    $div_day_quote = $("<div>").append($("<h2>", {"class": "title"}).text("A random quote"));
-    $("#personal").append($div_day_quote);
-
-    $.getJSON("quotations.json", function(json) {
-        var i = fullDaysSinceEpoch%json.quotations.length;
-        var $div_quote = $("<div>", {"class": "quote"}).text('"' + json.quotations[i].quote + '"');
-        var $div_author = $("<div>", {"class": "quote_author"}).text(json.quotations[i].author);
-        $div_day_quote.append($div_quote);
-        $div_day_quote.append($div_author);
-    });
-}
-
 function div_quote(quote) {
     var $div_quote = $("<div>", {"class": "quote"}).text('"' + quote.quote + '"');
     return $div_quote
@@ -201,6 +165,40 @@ function div_author(quote) {
     }
     var $div_author = $("<div>", {"class": "quote_author"}).text(author_text);
     return $div_author
+}
+
+function load_random_quote()
+{
+    var now = new Date();
+    var fullDaysSinceEpoch = Math.floor(now/8.64e7);
+
+    $div_day_quote = $("<div>").append($("<h2>", {"class": "title"}).text("Random favorite quote"));
+    $("#personal").append($div_day_quote);
+
+    $.getJSON("quotations.json", function(json) {
+        var i = Math.floor(Math.random()*json.quotations.length);
+        var $div_quote = div_quote(json.quotations[i]);
+        var $div_author = div_author(json.quotations[i]);
+        $("#personal").append($div_quote);
+        $("#personal").append($div_author);
+    });
+}
+
+function load_day_quote()
+{
+    var now = new Date();
+    var fullDaysSinceEpoch = Math.floor(now/8.64e7);
+
+    $div_day_quote = $("<div>").append($("<h2>", {"class": "title"}).text("A random quote"));
+    $("#personal").append($div_day_quote);
+
+    $.getJSON("quotations.json", function(json) {
+        var i = fullDaysSinceEpoch%json.quotations.length;
+        var $div_quote = div_quote(json.quotations[i]);
+        var $div_author = div_author(json.quotations[i]);
+        $div_day_quote.append($div_quote);
+        $div_day_quote.append($div_author);
+    });
 }
 
 function load_all_quotations()
