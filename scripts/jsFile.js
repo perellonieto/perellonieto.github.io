@@ -156,14 +156,20 @@ function div_quote(quote) {
 }
 
 function div_author(quote) {
-    var author_text = quote.author
+    var link = $('<a/>');
+    link.attr('href', 'https://en.wikipedia.org/wiki/' + quote.author);
+    link.text(quote.author);
+    var $div_author = $("<div>", {"class": "quote_author"}).html(link)
+
+    var author_text = ''
     if (quote.a_years) {
         author_text += ' (' + quote.a_years + ')';
     }
     if (quote.source) {
         author_text += ', ' + quote.source;
     }
-    var $div_author = $("<div>", {"class": "quote_author"}).text(author_text);
+
+    $div_author.append(author_text);
     return $div_author
 }
 
