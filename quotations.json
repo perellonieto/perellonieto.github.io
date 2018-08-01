@@ -1,5 +1,6 @@
 {
-"quotations":[ {"quote":"One thorn of experience is worth a whole wilderness of warning.",
+"quotations":[
+    {"quote":"One thorn of experience is worth a whole wilderness of warning.",
     "author":"James Russell Lowell",
     "a_years":"1819-1891"},
     {"quote":"The only source of knowledge is experience.",
@@ -269,6 +270,8 @@
     "author":"Donald Rumsfeld",
     "source":"Department of Defense (February 12, 2002)",
     "s_link":"http://archive.defense.gov/Transcripts/Transcript.aspx?TranscriptID=2636"},
+    {"quote":"Someone once told me the definition of Hell: The last day you have on earth, the person you became will meet the person you could have become.",
+    "author":"Anonymous"},
     {"quote":"Ask as a complete ignorant. Only then, contrast with your prior knowledge.",
     "author":"Miquel Perelló Nieto"},
     {"quote":"If I don't know you, then you can't claim you know who am I.",
