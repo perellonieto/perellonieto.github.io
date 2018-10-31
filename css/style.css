@@ -342,7 +342,14 @@ a.document {
 }
 
 a.document:hover {
-	color:#0077AA;
+	color: #0077AA;
+}
+
+div.logo {
+    background-color: white;
+    text-align: justify;
+    text-align-last: justify;
+    border-radius: 15px;
 }
 
 a.logo {
@@ -352,11 +359,11 @@ a.logo {
 img.logo {
     max-width: 200px;
     max-height: 150px;
-    border: 0px;
     align: middle;
-    border: 2px solid transparent;
+    vertical-align: middle;
+    border: 10px solid transparent;
 }
 
 img.logo:hover {
-    border: 2px solid #0077AA;
+    outline: 2px solid #0077AA;
 }
