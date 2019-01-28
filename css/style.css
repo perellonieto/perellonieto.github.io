@@ -60,9 +60,9 @@ h3.title{
 	min-width:700px;
 	max-width:85%;
 	min-height:400px;
-	-moz-box-shadow: 0 0 30px 15px #444;
-    -webkit-box-shadow: 0 0 30px 15px #444;
-    box-shadow: 0 0 30px 15px #444;
+	-moz-box-shadow: 0 0 40px 10px black;
+    -webkit-box-shadow: 0 0 40px 10px black;
+    box-shadow: 0 0 40px 10px black;
 }
 
 .idioms {
