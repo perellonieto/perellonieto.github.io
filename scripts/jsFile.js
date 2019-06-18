@@ -107,30 +107,13 @@ personal_out  = false;
 pull_over = false;
 pull_out  = false;
 imgPersId = 0;
-imgPersList = ["./images/valleta_200_shirt_org.png",
-"./images/valleta_200_only_me.png",
-"./images/valleta_200_me_bw_me_col.png",
-"./images/valleta_200_me_dis.png",
-"./images/valleta_200_shirt_red.png",
-"./images/valleta_200_me_inv.png",
-"./images/valleta_200_me_purple.png",
-"./images/valleta_200_me_col_me_col.png",
-"./images/valleta_200.png",
-"./images/valleta_200_me_purple.png",
-"./images/valleta_200_em_dis.png",
-"./images/valleta_200_empty.png",
-"./images/valleta_200_em_col_me_col.png",
-"./images/valleta_200_sep.png",
-"./images/valleta_200_shirt_green.png",
-"./images/valleta_200_em_bw_me_col.png",
-"./images/valleta_200_only_red.png",
-"./images/valleta_200_metal.png",
-"./images/valleta_200_man_updown.png",
-"./images/valleta_200_only_bw_pixel.png",
-"./images/valleta_200_only_bw_mosaic.png",
-"./images/valleta_200_only_bw_lense.png",
-"./images/valleta_200_only_bw_motion.png",
-"./images/valleta_200_only_bw.png"];
+imgPersList = ["./images/mpn_photo_01_300.jpg",
+"./images/mpn_photo_02_300.jpg",
+"./images/mpn_photo_03_300.jpg",
+"./images/mpn_photo_04_300.jpg",
+"./images/mpn_photo_05_300.jpg",
+"./images/mpn_photo_06_300.jpg",
+];
 imgPersMax = imgPersList.length;
 
 function updateDate()
