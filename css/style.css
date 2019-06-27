@@ -599,45 +599,51 @@ button:active {
     left: 0;
     background-image:url('../icon/mortarboard.svg');
     background-repeat: no-repeat;
-    background-position: left;
+    background-position: 17px;
   }
 
-body {
-	margin-left: 0%;
-	margin-right: 0%;
-	width: 100%;
-}
+/* Make all right containers behave like the left ones */
+  .cv_work {
+    left: 0;
+    background-position: 17px;
+  }
 
-.page {
-	max-width:100%;
-}
+  body {
+  	margin-left: 0%;
+  	margin-right: 0%;
+  	width: 100%;
+  }
 
-.student {
-    float: none;
+  .page {
+  	max-width:100%;
+  }
 
-    margin-left:0px;
-}
+  .student {
+      float: none;
 
-.studentfront {
-    float: left;
-    margin-left:0px;
-    position: absolute;
-}
+      margin-left:0px;
+  }
 
-.continente {
-    /* Firefox */
-    width: -moz-calc(98% - 165px);
-    /* WebKit */
-    width: -webkit-calc(98% - 165px);
-    /* Opera */
-    width: -o-calc(98% - 165px);
-    /* Standard */
-    width: calc(98% - 165px);
-}
+  .studentfront {
+      float: left;
+      margin-left:0px;
+      position: absolute;
+  }
 
-iframe {
-    width: 100%
-}
+  .continente {
+      /* Firefox */
+      width: -moz-calc(98% - 165px);
+      /* WebKit */
+      width: -webkit-calc(98% - 165px);
+      /* Opera */
+      width: -o-calc(98% - 165px);
+      /* Standard */
+      width: calc(98% - 165px);
+  }
+
+  iframe {
+      width: 100%
+  }
 
 }
 
