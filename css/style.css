@@ -13,6 +13,7 @@ body {
 	width: 90%;
     font-family: Arial, Helvetica, sans-serif;
     font-size: small;
+    overflow-x: hidden;
 }
 
 a {
@@ -63,7 +64,7 @@ h3.title{
 	/*background-color: #DFDFFF; */
 	background-color: #FFFFFF;
 	overflow: visible;
-	min-width:700px;
+	/*min-width:700px;*/
 	max-width:85%;
 	min-height:400px;
 	-moz-box-shadow: 0 0 40px 10px black;
@@ -104,10 +105,17 @@ h3.title{
 
 .continente {
 	margin-left: 165px;
-	width: 75%;
 	margin-top: 0px;
 	margin-bottom:30px;
 	min-height:200px;
+    /* Firefox */
+    width: -moz-calc(90% - 165px);
+    /* WebKit */
+    width: -webkit-calc(90% - 165px);
+    /* Opera */
+    width: -o-calc(90% - 165px);
+    /* Standard */
+    width: calc(90% - 165px);
 }
 
 #personal {
@@ -211,6 +219,27 @@ img.picture:hover {
 }
 
 .student {
+    float:right;
+    position:relative;
+
+    /*background: url('../images/valleta_200_body.png') no-repeat;*/
+
+    width:300px;
+    height:300px;
+
+    top:0px;
+    right:0px;
+
+    margin-left:30px;
+
+    -moz-box-shadow: 0 0 10px 5px #333;
+    -webkit-box-shadow: 0 0 10px 5px #333;
+    box-shadow: 0 0 10px 5px #333;
+
+    cursor:crosshair;
+}
+
+.studentfront {
     float:right;
     position:relative;
 
@@ -446,7 +475,7 @@ button:active {
 }
 
 /* Place work on the left */
-div.cv_work {
+.cv_work {
     left: 0;
     background-image:url('../icon/briefcase.svg');
     background-repeat: no-repeat;
@@ -454,7 +483,7 @@ div.cv_work {
 }
 
 /* Place education on the right */
-div.cv_education {
+.cv_education {
     left: 50%;
     background-image:url('../icon/mortarboard.svg');
     background-repeat: no-repeat;
@@ -533,37 +562,83 @@ div.cv_education {
     display: None;
 }
 
-/* Media queries - Responsive timeline on screens less than 600px wide */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 900px) {
 /* Place the timelime to the left */
   .cv_timeline::after {
-    left: 31px;
+    left: 15px;
   }
 
 /* Full-width containers */
   .cv_container {
     width: 100%;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 40px;
+    padding-right: 0px;
   }
 
 /* Make sure that all arrows are pointing leftwards */
   .cv_container::before {
-    left: 60px;
-    border: medium solid whitesmoke;
-    border-width: 10px 10px 10px 0;
-    border-color: transparent whitesmoke transparent transparent;
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 12px;
+  border: medium solid whitesmoke;
+  border-width: 10px 28px 10px 0;
+  border-color: transparent #0077AA transparent transparent;
   }
 
 /* Make sure all circles are at the same spot */
   .cv_work::after, .cv_education::after {
-    left: 15px;
+    left: 0px;
   }
 
 /* Make all right containers behave like the left ones */
   .cv_education {
-    left: 0%;
+    left: 0;
+    background-image:url('../icon/mortarboard.svg');
+    background-repeat: no-repeat;
+    background-position: left;
   }
+
+body {
+	margin-left: 0%;
+	margin-right: 0%;
+	width: 100%;
+}
+
+.page {
+	max-width:100%;
+}
+
+.student {
+    float: none;
+
+    margin-left:0px;
+}
+
+.studentfront {
+    float: left;
+    margin-left:0px;
+    position: absolute;
+}
+
+.continente {
+    /* Firefox */
+    width: -moz-calc(98% - 165px);
+    /* WebKit */
+    width: -webkit-calc(98% - 165px);
+    /* Opera */
+    width: -o-calc(98% - 165px);
+    /* Standard */
+    width: calc(98% - 165px);
+}
+
+iframe {
+    width: 100%
+}
+
 }
 
 
