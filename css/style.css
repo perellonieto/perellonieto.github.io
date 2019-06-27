@@ -469,10 +469,10 @@ div.cv_education {
   top: 22px;
   width: 0;
   z-index: 1;
-  right: 30px;
+  right: 12px;
   border: medium solid whitesmoke;
-  border-width: 10px 0 10px 10px;
-  border-color: transparent transparent transparent whitesmoke;
+  border-width: 10px 0 10px 28px;
+  border-color: transparent transparent transparent #0077AA;
 }
 
 /* Add arrows to the right container (pointing left) */
@@ -483,10 +483,10 @@ div.cv_education {
   top: 22px;
   width: 0;
   z-index: 1;
-  left: 30px;
+  left: 12px;
   border: medium solid whitesmoke;
-  border-width: 10px 10px 10px 0;
-  border-color: transparent whitesmoke transparent transparent;
+  border-width: 10px 28px 10px 0;
+  border-color: transparent #0077AA transparent transparent;
 }
 
 /* Fix the circle for containers on the right side */
@@ -518,7 +518,7 @@ div.cv_education {
     width: 40%;
 }
 .cv_institution {
-    font-size: larger;
+    font-size: normal;
     color: #0B3861;
 }
 .cv_location {
