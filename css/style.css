@@ -5,9 +5,9 @@
 }
 
 body {
-	background-color: black;
+	background-color: gray;
 	/*background="../images/background.gif"*/
-	background-image:url('../images/background_4k.png');
+	background-image:url('../images/background_4k_gray.png');
 	background-repeat:repeat-x;
 	margin-left: 5%;
 	width: 90%;
@@ -344,7 +344,6 @@ a.panel:hover{
     margin-top: 30px;
     text-align: center;
     color: black;
-    text-shadow: -1px 0 grey, 1px 0 grey, 0 -1px grey, 0 1px grey;
 }
 
 div.document {
