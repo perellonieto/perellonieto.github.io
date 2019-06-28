@@ -283,8 +283,12 @@
     "author":"Aubrey de Grey"},
     {"quote":"Ask as a complete ignorant. Only then, contrast with your prior knowledge.",
     "author":"Miquel Perelló Nieto"},
-    {"quote":"If I don't know you, then you can't claim you know who am I.",
-    "author":"Miquel Perelló Nieto"}
+    {"quote":"If I don't know you, then you can't claim you know me.",
+    "author":"Miquel Perelló Nieto"},
+    {"quote":"For the probability that Socrates is mortal is greater, on our data, than the probability that all men are mortal. [...] Hence we shall reach the conclusion that Socrates is mortal with a greater approach to certainty if we make our argument purely inductive than if we go by way of ‘all men are mortal’ and then use deduction.",
+    "author":"Bertrand Russell",
+    "source":"The Problems of Philosophy, Chapter VII, 1912",
+    "a_years":"1872-1970"}
 ]
 }
 
