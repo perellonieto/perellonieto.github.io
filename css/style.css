@@ -138,6 +138,7 @@ h3.title{
 }
 
 #videos {
+    max-width: 900px;
 }
 
 .cv_dow {
@@ -640,11 +641,21 @@ button:active {
       width: calc(98% - 165px);
   }
 
-  iframe {
-      width: 100%
-  }
-
 }
 
+.youtube {
+    width: 100%;
+    padding-top: 56.25%;
+    position: relative;
+    padding-bottom: 50px;
+}
+
+.youtube > iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
 
 /* ====== CV end ====== */
