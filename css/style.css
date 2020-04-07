@@ -34,12 +34,19 @@ a:hover {
 }
 
 h2.title{
-    font-weight: bold;
 	color:#0B3861;
+    font-weight: bold;
+    font-size: 2em;
 }
 
 h3.title{
 	color:#0077AA;
+    font-size: 1.5em;
+}
+
+h4.title{
+	color:#0B3861;
+    font-size: 1.3em;
 }
 
 .cv {
