@@ -244,7 +244,7 @@ img.picture:hover {
     -webkit-box-shadow: 0 0 10px 5px #333;
     box-shadow: 0 0 10px 5px #333;
 
-    cursor:crosshair;
+    cursor:url('../images/cursors/brush_cursor.svg'), auto;
 }
 
 .studentfront {
@@ -265,7 +265,7 @@ img.picture:hover {
     -webkit-box-shadow: 0 0 10px 5px #333;
     box-shadow: 0 0 10px 5px #333;
 
-    cursor:crosshair;
+    cursor:url('../images/cursors/brush_cursor.svg'), auto;
 }
 
 /*
