@@ -107,12 +107,15 @@ personal_out  = false;
 pull_over = false;
 pull_out  = false;
 imgPersId = 0;
-imgPersList = ["./images/mpn_photo_01_300.jpg",
+imgPersList = [
+"./images/mpn_photo_01_300.jpg",
 "./images/mpn_photo_02_300.jpg",
 "./images/mpn_photo_03_300.jpg",
 "./images/mpn_photo_04_300.jpg",
 "./images/mpn_photo_05_300.jpg",
 "./images/mpn_photo_06_300.jpg",
+"./images/mpn_photo_07_300.jpg",
+"./images/mpn_photo_08_300.jpg",
 ];
 imgPersMax = imgPersList.length;
 
