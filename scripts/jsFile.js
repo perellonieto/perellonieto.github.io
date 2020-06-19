@@ -116,6 +116,7 @@ imgPersList = [
 "./images/mpn_photo_06_300.jpg",
 "./images/mpn_photo_07_300.jpg",
 "./images/mpn_photo_08_300.jpg",
+"./images/mpn_photo_09_300.jpg",
 ];
 imgPersMax = imgPersList.length;
 
