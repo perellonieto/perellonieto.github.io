@@ -321,7 +321,12 @@
     "author":"Bertrand Russell",
     "source":"1929 Lecture (cited in Bell 1945, 587)",
     "s_link":"https://plato.stanford.edu/entries/probability-interpret/",
-    "a_years":"1931-1970"}
+    "a_years":"1931-1970"},
+    {"quote":"We ought then to regard the present state of the universe as the effect of its anterior state and as the cause of the one which is to follow. Given for one instant an intelligence which could comprehend all the forces by which nature is animated and the respective situation of the beings who commpose it -- an intelligence sufficiently vast to submit these data to analysis -- it would embrace in the same formula the movements of the greatest bodies of the universe and those of the lightest atom; for it, nothing would be uncertain and the future, as the past, would be present to its eyes.",
+    "author":"Pierre Simon Marquis De Laplace ",
+    "source":"A Philosophical Essay on Probabilities, p. 4 (translated by F.W.Truscott and F.L. Emory)",
+    "s_link":"https://bayes.wustl.edu/Manual/laplace_A_philosophical_essay_on_probabilities.pdf",
+    "a_years":"1749-1827"}
 ]
 }
 
