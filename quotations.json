@@ -293,10 +293,6 @@
     "author":"Anonymous"},
     {"quote":"Don't cling to a mistake just because you spent a lot of time making it.",
     "author":"Aubrey de Grey"},
-    {"quote":"Ask as a complete ignorant. Only then, contrast with your prior knowledge.",
-    "author":"Miquel Perelló Nieto"},
-    {"quote":"If I don't know you, then you can't claim you know me.",
-    "author":"Miquel Perelló Nieto"},
     {"quote":"For the probability that Socrates is mortal is greater, on our data, than the probability that all men are mortal. [...] Hence we shall reach the conclusion that Socrates is mortal with a greater approach to certainty if we make our argument purely inductive than if we go by way of ‘all men are mortal’ and then use deduction.",
     "author":"Bertrand Russell",
     "source":"The Problems of Philosophy, Chapter VII, 1912",
@@ -326,7 +322,9 @@
     "author":"Pierre Simon Marquis De Laplace ",
     "source":"A Philosophical Essay on Probabilities, p. 4 (translated by F.W.Truscott and F.L. Emory)",
     "s_link":"https://bayes.wustl.edu/Manual/laplace_A_philosophical_essay_on_probabilities.pdf",
-    "a_years":"1749-1827"}
+    "a_years":"1749-1827"},
+    {"quote":"Ask as a complete ignorant. Only then, contrast with your prior knowledge.",
+    "author":"Miquel Perelló Nieto"}
 ]
 }
 
