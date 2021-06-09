@@ -153,7 +153,16 @@ function div_author(quote) {
         author_text += ' (' + quote.a_years + ')';
     }
     if (quote.source) {
-        author_text += ', ' + quote.source;
+        if (quote.s_link) {
+            author_text += '<a href="';
+            author_text += quote.s_link;
+            author_text += '">';
+            author_text += ', ' + quote.source;
+            author_text += '</a>';
+        }
+        else {
+            author_text += ', ' + quote.source;
+        }
     }
 
     $div_author.append(author_text);

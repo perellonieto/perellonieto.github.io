@@ -324,7 +324,17 @@
     "s_link":"https://bayes.wustl.edu/Manual/laplace_A_philosophical_essay_on_probabilities.pdf",
     "a_years":"1749-1827"},
     {"quote":"Ask as a complete ignorant. Only then, contrast with your prior knowledge.",
-    "author":"Miquel Perelló Nieto"}
+    "author":"Miquel Perelló Nieto"},
+    {"quote":"There are two possible outcomes: if the result confirms the hypothesis, then you've made a measurement. If the result is contrary to the hypothesis, then you've made a discovery.",
+    "author":"Enrico Fermi",
+    "source":"as quoted in Nuclear Principles in Engineering (2005) by Tatjana Jevremovic, p. 397",
+    "s_link":"https://link.springer.com/chapter/10.1007/0-387-23285-0_8",
+    "a_years":"1901-1954"},
+    {"quote":"We have not succeeded in answering all our problems—indeed we sometimes feel we have not completely answered any of them. The answers we have found have only served to raise a whole set of new questions. In some ways we feel that we are as confused as ever, but we think we are confused on a higher level, and about more important things.",
+    "author":"Earl C. Kelley",
+    "source":"The Workshop Way of Learning (1951)",
+    "s_link":"https://www.oxfordreference.com/view/10.1093/acref/9780191826719.001.0001/q-oro-ed4-00016678",
+    "a_years":"1895-1970"}
 ]
 }
 
