@@ -136,6 +136,9 @@ h4.title{
 #pictures {
 }
 
+#visited {
+}
+
 #cv {
     text-align: justify;
     overflow: hidden;
@@ -295,7 +298,7 @@ img.student {
 div.panel {
     float:left;
     position:relative;
-	width: 180px;
+	/*width: 180px;*/
     padding-bottom: 30px;
 }
 
