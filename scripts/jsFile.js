@@ -134,7 +134,7 @@ function updateDate()
 
   var LastUpdated = day + ", " + num + " " + month + " " + year ;
 
-  document.getElementById("date").innerHTML = "This page was last updated on " + LastUpdated;
+  document.getElementById("date").innerHTML = LastUpdated;
 }
 
 function div_quote(quote) {
@@ -227,6 +227,8 @@ function init() {
   if (document.getElementById("quotations")) {
     load_all_quotations();
   }
+
+  updateDate();
 }
 
 window.onload = init;
