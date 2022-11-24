@@ -587,8 +587,19 @@ button:active {
     width: 60%;
     text-align: right;
 }
+.cv_project {
+    font-size: normal;
+    color: #0B3861;
+}
+.cv_instructor, .cv_supervisor {
+    font-size: italic;
+    color: #0077AA;
+}
 .cv_description {
     font-size: small;
+}
+.cv_description ul{
+    margin: 1px;
 }
 
 @media screen and (max-width: 900px) {
