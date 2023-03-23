@@ -1,4 +1,21 @@
-function imgPersonalOver()
+function changeRandomPersonalImage()
+{
+    actual=Math.floor(Math.random()*imgPersMax);
+
+    var contenidos = document.getElementsByTagName("div");
+    for(var x=0; x<contenidos.length; x++)
+    {
+        name = contenidos[x].getAttribute("class");
+        if (name == 'student')
+        {
+            contenidos[x].setAttribute('style', "background: url('"+imgPersList[actual]+"') no-repeat;");
+            return;
+        }
+    }
+}
+
+/* MPN: I have inverted the functions Out and Over */
+function imgPersonalOut()
 {
   if (personal_over == false)
   {
@@ -11,7 +28,7 @@ function imgPersonalOver()
   }
 }
 
-function imgPersonalOut()
+function imgPersonalOver()
 {
   if (personal_over == true && personal_out == false)
   {
@@ -21,30 +38,7 @@ function imgPersonalOut()
     }, 850, function() {
       personal_over = false;
       personal_out = false;
-
-
-      /*if (imgPersId < imgPersMax-1)
-       *                    {
-       *                        imgPersId = (imgPersId+1);
-       *                        actual = imgPersId;
-    }
-    else
-    {
-    actual=Math.floor(Math.random()*imgPersMax);
-    }*/
-
-      actual=Math.floor(Math.random()*imgPersMax);
-
-      var contenidos = document.getElementsByTagName("div");
-      for(var x=0; x<contenidos.length; x++)
-      {
-	name = contenidos[x].getAttribute("class");
-	if (name == 'student')
-	{
-	  contenidos[x].setAttribute('style', "background: url('"+imgPersList[actual]+"') no-repeat;");
-	  return;
-	}
-      }
+      changeRandomPersonalImage();
     });
   }
 }
@@ -221,6 +215,8 @@ function init() {
   var personal = document.getElementById("personal");
   if (personal) {
       personalBackground();
+      changeRandomPersonalImage();
+      imgPersonalOut();
       preload(imgPersList);
       load_random_quote();
   }
