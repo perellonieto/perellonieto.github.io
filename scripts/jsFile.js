@@ -101,23 +101,13 @@ personal_out  = false;
 pull_over = false;
 pull_out  = false;
 imgPersId = 0;
-imgPersList = [
-"./images/mpn_photo_01_300.jpg",
-"./images/mpn_photo_02_300.jpg",
-"./images/mpn_photo_03_300.jpg",
-"./images/mpn_photo_04_300.jpg",
-"./images/mpn_photo_05_300.jpg",
-"./images/mpn_photo_06_300.jpg",
-"./images/mpn_photo_07_300.jpg",
-"./images/mpn_photo_08_300.jpg",
-"./images/mpn_photo_09_300.jpg",
-"./images/mpn_photo_10_300.jpg",
-"./images/mpn_photo_11_300.jpg",
-"./images/mpn_photo_12_300.jpg",
-"./images/mpn_photo_13_300.jpg",
-"./images/mpn_photo_14_300.jpg",
-"./images/mpn_photo_15_300.jpg",
-];
+imgPersList = [];
+
+for (var i = 1; i <= 23; i++) {
+  var s = "0" + i;
+  imgPersList.push("./images/mpn_photo_" + s.slice(-2) + "_300.jpg");
+}
+
 imgPersMax = imgPersList.length;
 
 function updateDate()
