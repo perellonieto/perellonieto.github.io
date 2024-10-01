@@ -5,9 +5,9 @@
 }
 
 body {
-	background-color: gray;
+	background-color: white;
 	/*background="../images/background.gif"*/
-	background-image:url('../images/background_4k_gray.png');
+	background-image:url('../images/background_4k_lightgray.png');
 	background-repeat:repeat-x;
 	margin-left: 5%;
 	width: 90%;
@@ -74,9 +74,10 @@ h4.title{
 	/*min-width:700px;*/
 	max-width:85%;
 	min-height:400px;
-	-moz-box-shadow: 0 0 40px 10px black;
-    -webkit-box-shadow: 0 0 40px 10px black;
-    box-shadow: 0 0 40px 10px black;
+	-moz-box-shadow: 0 0 5px 5px #CCC;
+    -webkit-box-shadow: 0 0 5px 5px #CCC;
+    box-shadow: 0 0 5px 5px #CCC;
+    border-radius: 10px;
 }
 
 .idioms {
