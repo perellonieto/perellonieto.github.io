@@ -5,10 +5,10 @@
 }
 
 body {
-	background-color: white;
+	background-color: #FFF;
 	/*background="../images/background.gif"*/
-	background-image:url('../images/background_4k_lightgray.png');
-	background-repeat:repeat-x;
+	/*background-image:url('../images/background_4k_lightgray.png');*/
+	/*background-repeat:repeat-x;*/
 	margin-left: 5%;
 	width: 90%;
     font-family: Arial, Helvetica, sans-serif;
@@ -60,8 +60,8 @@ h4.title{
 }
 
 .page {
-    background-image:url('../images/textura_02_mosaic_light.png');
-    background-repeat:repeat;
+    /*background-image:url('../images/textura_02_mosaic_light.png');
+    background-repeat:repeat;*/
     position:relative;
     margin-top: 30px;
     margin-bottom: 30px;
@@ -69,14 +69,14 @@ h4.title{
     margin-right: auto ;
 	border: 1px solid rgb(147, 147, 147);
 	/*background-color: #DFDFFF; */
-	background-color: #FFFFFF;
+	background-color: #EEE;
 	overflow: visible;
 	/*min-width:700px;*/
 	max-width:85%;
 	min-height:400px;
-	-moz-box-shadow: 0 0 5px 5px #CCC;
+	/*-moz-box-shadow: 0 0 5px 5px #CCC;
     -webkit-box-shadow: 0 0 5px 5px #CCC;
-    box-shadow: 0 0 5px 5px #CCC;
+    box-shadow: 0 0 5px 5px #CCC;*/
     border-radius: 10px;
 }
 
@@ -183,9 +183,9 @@ h4.title{
     border:0px;
     display:block;
     border-radius: 50px;
-    -moz-box-shadow: 0 0 1px 1px #111;
+    /*-moz-box-shadow: 0 0 1px 1px #111;
     -webkit-box-shadow: 0 0 1px 1px #111;
-    box-shadow: 0 0 1px 1px #111;
+    box-shadow: 0 0 1px 1px #111;*/
 }
 
 .picture {
@@ -244,11 +244,11 @@ img.picture:hover {
 
     margin:30px;
 
-    -moz-box-shadow: 0 0 10px 5px #333;
+    /*-moz-box-shadow: 0 0 10px 5px #333;
     -webkit-box-shadow: 0 0 10px 5px #333;
-    box-shadow: 0 0 10px 5px #333;
+    box-shadow: 0 0 10px 5px #333;*/
 
-    cursor:url('../images/cursors/brush_cursor.svg'), auto;
+    /*cursor:url('../images/cursors/brush_cursor.svg'), auto;*/
 }
 
 .studentfront {
@@ -265,11 +265,11 @@ img.picture:hover {
 
     margin-left:30px;
 
-    -moz-box-shadow: 0 0 10px 5px #333;
+    /*-moz-box-shadow: 0 0 10px 5px #333;
     -webkit-box-shadow: 0 0 10px 5px #333;
-    box-shadow: 0 0 10px 5px #333;
+    box-shadow: 0 0 10px 5px #333;*/
 
-    cursor:url('../images/cursors/brush_cursor.svg'), auto;
+    /*cursor:url('../images/cursors/brush_cursor.svg'), auto;*/
 }
 
 /*
@@ -312,9 +312,9 @@ div.newpanel {
     border: 5px double;
     border-color: lightgray;
     border-radius: 10px;
-    -moz-box-shadow: 0 0 10px 5px #333;
+    /*-moz-box-shadow: 0 0 10px 5px #333;
     -webkit-box-shadow: 0 0 10px 5px #333;
-    box-shadow: 0 0 10px 5px #333;
+    box-shadow: 0 0 10px 5px #333;*/
 }
 
 ul.newpanel {
