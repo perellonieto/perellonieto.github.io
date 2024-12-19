@@ -126,6 +126,10 @@ h4.title{
     width: calc(90% - 165px);
 }
 
+.contenido {
+    margin-left: 5px;
+}
+
 #personal {
     text-align: justify;
 }
@@ -636,21 +640,21 @@ button:active {
 }
 
 /* Make all right containers behave like the left ones */
-  .cv_education, .cv_climb {
+.cv_education, .cv_climb {
     left: 0;
-  }
+}
 
 
 /* Make sure all circles are at the same spot */
-  .cv_sports::after, .cv_climb::after {
+.cv_sports::after, .cv_climb::after {
     left: 0px;
-  }
+}
 
 /* Make all right containers behave like the left ones */
-  .cv_work, .cv_sports {
+.cv_work, .cv_sports {
     left: 0;
     background-position: 17px;
-  }
+}
 
   body {
   	margin-left: 0%;
@@ -684,7 +688,6 @@ button:active {
       /* Standard */
       width: calc(98% - 165px);
   }
-
 }
 
 .youtube {
