@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Country Size Comparison</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 2rem;
+      background-color: #f9f9f9;
+    }
+    h1 {
+      text-align: center;
+    }
+    input {
+      margin-bottom: 1rem;
+    }
+    #charts-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+    .chart-wrapper {
+      width: 600px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Country Size Comparison</h1>
+  <p>Enter country names (comma separated):</p>
+  <input type="text" id="customInput" placeholder="e.g., Spain, France, Japan"
+  style="width: 300px"/>
+  <button onclick="updateCharts()">Compare</button>
+
+  <div id="charts-container">
+    <div class="chart-wrapper">
+      <canvas id="populationChart"></canvas>
+      <label><input type="checkbox" id="logPopulation" onchange="toggleScale(populationChart, 'logPopulation')"/>Log scale</label>
+    </div>
+    <div class="chart-wrapper">
+      <canvas id="densityChart"></canvas>
+      <label><input type="checkbox" id="logDensity" onchange="toggleScale(densityChart, 'logDensity')" />Log scale</label>
+    </div>
+    <div class="chart-wrapper">
+      <canvas id="sizeChart"></canvas>
+      <label><input type="checkbox" id="logSize" onchange="toggleScale(sizeChart, 'logSize')" /> Log scale</label>
+    </div>
+  </div>
+
+  <script>
+    const data = {}; // filled dynamically
+    let populationChart, densityChart, sizeChart;
+
+    async function fetchRegionData(name) {
+      try {
+        const res = await fetch(`https://restcountries.com/v3.1/name/${encodeURIComponent(name)}?fullText=true`);
+        if (!res.ok) throw new Error("Country not found");
+        const json = await res.json();
+        const region = json[0];
+        return {
+          population: region.population,
+          size: region.area,
+          density: region.population / region.area
+        };
+      } catch {
+        return null; // Could try fallback to city API here
+      }
+    }
+
+    async function updateCharts() {
+      const input = document.getElementById('customInput').value.trim();
+      const names = input.split(',').map(x => x.trim()).filter(Boolean);
+      const labels = [], populations = [], densities = [], sizes = [];
+
+      for (const name of names) {
+        if (!data[name]) {
+          const regionData = await fetchRegionData(name);
+          if (!regionData) {
+            alert(`Could not retrieve data for: ${name}`);
+            continue;
+          }
+          data[name] = regionData;
+        }
+        labels.push(name);
+        populations.push(data[name].population);
+        densities.push(data[name].density);
+        sizes.push(data[name].size);
+      }
+
+      populationChart = createChart('populationChart', 'Population', labels, populations, document.getElementById('logPopulation').checked, 'rgba(75, 192, 192, 0.6)');
+      densityChart = createChart('densityChart', 'Population Density (per km²)', labels, densities, document.getElementById('logDensity').checked, 'rgba(153, 102, 255, 0.6)');
+      sizeChart = createChart('sizeChart', 'Geographical Size', labels, sizes, document.getElementById('logSize').checked, 'rgba(255, 159, 64, 0.6)');
+    }
+
+    function createChart(canvasId, title, labels, dataSet, isLog, color) {
+      const ctx = document.getElementById(canvasId);
+      if (Chart.getChart(ctx)) Chart.getChart(ctx).destroy();
+      return new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels,
+          datasets: [{ label: title, data: dataSet, backgroundColor: color }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: { display: false },
+            tooltip: { mode: 'index', intersect: false },
+            title: { display: true, text: title }
+          },
+          scales: {
+            y: {
+              type: isLog ? 'logarithmic' : 'linear',
+              beginAtZero: !isLog
+            }
+          }
+        }
+      });
+    }
+
+    function toggleScale(chart, checkboxId) {
+      const isLog = document.getElementById(checkboxId).checked;
+      if (chart) {
+        chart.options.scales.y.type = isLog ? 'logarithmic' : 'linear';
+        chart.options.scales.y.beginAtZero = !isLog;
+        chart.update();
+      }
+    }
+  </script>
+<!-- ####______________________ FOOTER ______________________#### -->
+<div class="footer">
+  <p>ChatGPT created the first version of this page, which I have modified
+  after.</p>
+  <p>© Miquel Perelló Nieto, hosted in
+  <a href="https://github.com/perellonieto/perellonieto.github.io">GitHub</a>.
+  This page was last updated on <var id="date"></var>.
+  </p>
+</div>
+</body>
+</html>
