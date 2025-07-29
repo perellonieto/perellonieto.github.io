@@ -93,7 +93,7 @@
 
       populationChart = createChart('populationChart', 'Population', labels, populations, document.getElementById('logPopulation').checked, 'rgba(75, 192, 192, 0.6)');
       densityChart = createChart('densityChart', 'Population Density (per km²)', labels, densities, document.getElementById('logDensity').checked, 'rgba(153, 102, 255, 0.6)');
-      sizeChart = createChart('sizeChart', 'Geographical Size', labels, sizes, document.getElementById('logSize').checked, 'rgba(255, 159, 64, 0.6)');
+      sizeChart = createChart('sizeChart', 'Geographical Size (km²)', labels, sizes, document.getElementById('logSize').checked, 'rgba(255, 159, 64, 0.6)');
     }
 
     function createChart(canvasId, title, labels, dataSet, isLog, color) {
@@ -133,11 +133,10 @@
   </script>
 <!-- ####______________________ FOOTER ______________________#### -->
 <div class="footer">
-  <p>ChatGPT created the first version of this page, which I have modified
-  after.</p>
+  <p>This page has been created with the help of ChatGPT and manual
+  modifications.</p>
   <p>© Miquel Perelló Nieto, hosted in
   <a href="https://github.com/perellonieto/perellonieto.github.io">GitHub</a>.
-  This page was last updated on <var id="date"></var>.
   </p>
 </div>
 </body>
